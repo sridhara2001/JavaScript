@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+      <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>JS-VALIDATION</title>
+      </head>
+      <body>
+            <center>
+                  <h1>USERNAME VALIDATION</h1>
+            </center>
+            <form onsubmit="validationHandler(event)">
+                  <label for="user">Enter User Name</label>
+                  <input type="text" name="user" id="user" placeholder="User Name" minlength="5" maxlength="15">
+                  <strong id="status"></strong>
+                  <button type="submit">SUBMIT USER</button>
+            </form>
+
+            <script>
+                  function validationHandler(event) {
+                        event.preventDefault();
+
+                        let username = document.getElementById('user').value;
+                        let status = document.getElementById('status');
+
+                        if (username.length === 0) {
+                              status.innerHTML = "Please enter User Name";
+                              status.style.color = "orangered";
+                        } else {
+                              if (username.length <= 5) {
+                                    status.innerHTML = "Please enter User Name";
+                                    status.style.color = "orangered";
+                              } else {
+                                    status.innerHTML = "Valid User Name";
+                                    status.style.color = "green";
+                              }
+                        }
+                  }
+            </script>
+      </body>
+</html>

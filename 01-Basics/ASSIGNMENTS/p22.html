@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+      <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>JS-BASICS</title>
+            <link rel="stylesheet" href="assets/css/style1.css">
+      </head>
+      <body>
+            <div class="big">
+                  <h1>Reverse the Array</h1>
+                  <hr>
+
+                  <div id="result"></div>
+                  <div id="result1"></div>
+            </div>
+
+            <script>
+                  // let myArray = prompt('Enter Array :');
+                  // document.write(`<h2> The Array is : a = [${myArray}] </h2>`);
+                  // let reverseArray = []
+
+                  // for (let i = myArray.length; i >= 0; i--) {
+                  //       const array = myArray[i];
+
+                  //       reverseArray.push(array)
+                  // }
+                  // document.write(`<h2> The Reversed Array is : i = [${reverseArray}] </h2>`);
+
+                  const array = [1, 2, 3, 4]
+                  document.getElementById('result').innerHTML =`<h2>The Array is : i = [${array}] </h2>`;
+                  // document.write(`<h2>The Array is : i = [${array}] </h2>`);
+                  array.reverse();
+                  document.getElementById('result1').innerHTML =`<h2>The Reversed Array is : i = [${array}] </h2>`;
+                  // document.write(`<h2> The Reversed Array is : i = [${array}] </h2>`);
+            </script>
+      </body>
+</html>

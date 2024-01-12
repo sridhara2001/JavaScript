@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+      <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>JS-BASICS</title>
+            <link rel="stylesheet" href="assets/css/style1.css">
+      </head>
+      <body>
+            <div class="big">
+                  <h1>CHARACTER IS ALPHABET OR NUMBER OR SPECIAL CHARACTER</h1>
+                  <hr>
+
+                  <form onsubmit="condition(event)">
+                        <div>
+                              <label for="">Enter a Character *</label>
+                              <input type="text" name="character1" id="character1" required>
+                        </div>
+                        <button type="submit">SUBMIT</button>
+                  </form>
+                  <div id="result"></div>
+            </div>
+
+            <script>
+                  function condition(event) {
+                        event.preventDefault();
+
+                        let a = document.getElementById('character1').value;
+
+                        if (/[a-zA-Z]/.test(a)) {
+                              document.getElementById('result').innerHTML = `<h1> Character is "Alphabet" </h1>`;
+                        } else if (/[0-9]/.test(a)) {
+                              document.getElementById('result').innerHTML = `<h1> Character is Number </h1>`;
+                        } else {
+                              document.getElementById('result').innerHTML = `<h1> Character is Special Character </h1>`;
+                        }
+                  }
+            </script>
+      </body>
+</html>

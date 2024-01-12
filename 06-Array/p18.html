@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Array</title>
+    </head>
+    <body>
+        <center>
+            <h2>17) findIndex();</h2>
+            <p>This method returns the index of the first element in an array that stisfies the provided testing function.
+                if no elements satiosfy thetesting function then it returns -1.
+            </p>
+        </center>
+        <hr>
+
+        <p><b>SYNTAX:</b></p>
+
+        <pre>
+            array.findIndex(function(currentvalue,index,array),thisValues);
+        </pre>
+        <hr>
+
+        <script>
+            let ary = [62,99,94,45,56,23,44];
+            
+            const isLargeNumber = (element) => element > 90;
+            document.write(<p>RESULT : ${ary.findIndex(isLargeNumber)} </p>);
+            
+        </script>
+    </body>
+</html>

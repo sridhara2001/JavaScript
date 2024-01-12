@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+      <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>JS-BASICS</title>
+            <link rel="stylesheet" href="assets/css/style1.css">
+      </head>
+      <body>
+            <div class="big">
+                  <h1>Finding of Leap Year</h1>
+                  <hr>
+
+                  <form onsubmit="condition(event)">
+                        <div>
+                              <label for="">Enter The Year *</label>
+                              <input type="number" name="number1" id="number1" required>
+                        </div>
+                        <button type="submit">Check the Year</button>
+                  </form>
+                  <div id="result"></div>
+            </div>
+
+            <script>
+                  function condition(event){
+                        event.preventDefault();
+
+                        let a = document.getElementById('number1').value;
+                        let year = Number(a);
+
+                        if (year % 400 == 0) {
+                              document.getElementById('result').innerHTML = `<h1> The Year ${year} is Leap Year</h1>`;
+                        } else if (year % 100 == 0) {
+                              document.getElementById('result').innerHTML = `<h1> The Year ${year} is Not a Leap Year</h1>`;
+                        } else if (year % 4 == 0) {
+                              document.getElementById('result').innerHTML = `<h1> The Year ${year} is Leap Year</h1>`;
+                        } else {
+                              document.getElementById('result').innerHTML = `<h1> The Year ${year} is Not a Leap Year</h1>`;
+                        }
+                  }
+            </script>
+      </body>
+</html>

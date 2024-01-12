@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+      <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>JS-BASICS</title>
+            <link rel="stylesheet" href="assets/css/style1.css">
+      </head>
+      <body>
+            <div class="big">
+                  <h1>Reverse a Number</h1>
+                  <hr>
+
+                  <div id="result"></div>
+                  <div id="result1"></div>
+            </div>
+
+            <script>
+                  function reversedNumber (num, reversed=0) {
+                        if (num === 0) {
+                              return reversed;
+                        }
+                        return reversedNumber(Math.floor(num/10), reversed*10 + num%10);
+                  }
+                  const num = prompt('Enter a number');
+                  document.getElementById('result').innerHTML =`<h2>The Number is : i = ${num} </h2>`;
+                  const result = reversedNumber(num);
+
+                  document.getElementById('result1').innerHTML =`<h2>The Reversed number is : i = ${num} </h2>`;
+            </script>
+      </body>
+</html>

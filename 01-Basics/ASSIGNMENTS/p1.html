@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+      <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>JS-BASICS</title>
+            <link rel="stylesheet" href="assets/css/style.css">
+      </head>
+      <body>
+            <div class="big">
+                  <h1>JAVASCRIPT COMPARISON OPERATORS</h1>
+                  <hr>
+
+                  <form onsubmit="codeHandler(event)">
+                        <section>
+                        <label for="operation">Choose an Operation *</label>
+                        <select name="operation" id="operation" required>
+                              <option value="">----------SELECT OPERATION----------</option>
+                              <option value="equ">Equal</option>
+                              <option value="ide">Identical</option>
+                              <option value="not equ">Not Equal</option>
+                              <option value="not ide">Not Identical</option>
+                              <option value="gre">Greater</option>
+                              <option value="gre equ">Greater Equal</option>
+                              <option value="less">Less than</option>
+                              <option value="less equ">Less than Equal</option>
+                        </select>
+                        </section>
+                        <div>
+                        <label for="number1">Enter Number *</label>
+                        <input type="number" name="number1" id="number1" required>
+                        </div>
+                        <div>
+                        <label for="number2">Enter Number *</label>
+                        <input type="number" name="number2" id="number2" required>
+                        </div>
+                        <button type="submit">Execute Code</button>
+                        </form>
+
+                        <div id="result"></div>
+            </div>
+
+            <script>
+                  function codeHandler(event){
+                        event.preventDefault();
+
+                        let key= document.getElementById('operation').value;
+                        let a = document.getElementById('number1').value;
+                        let b = document.getElementById('number2').value;
+
+                        let x = Number(a);
+                        let y = Number(b);
+                        let res=0;
+
+                        switch (key) {
+                              case 'equ':
+                                    res = a==b;
+                                    document.title =`Condition is :${res}`;
+                                    document.getElementById('result').innerHTML=`<h1>Condition is : ${res} </h1>`;
+                                    break;
+
+                              case 'ide':
+                                    res = a===b;
+                                    document.title =`Condition is :${res}`;
+                                    document.getElementById('result').innerHTML=`<h1>Condition is : ${res} </h1>`;
+                                    break;
+
+                              case 'not equ':
+                                    res = a!=b;
+                                    document.title =`Condition is :${res}`;
+                                    document.getElementById('result').innerHTML=`<h1>Condition is : ${res} </h1>`;
+                                    break;
+                        
+                              case 'not ide':
+                                    res = a!==b;
+                                    document.title =`Condition is :${res}`;
+                                    document.getElementById('result').innerHTML=`<h1>Condition is : ${res} </h1>`;
+                                    break;
+
+                              case 'gre':
+                                    res = a>b;
+                                    document.title =`Condition is :${res}`;
+                                    document.getElementById('result').innerHTML=`<h1>Condition is : ${res} </h1>`;
+                                    break;
+
+                              case 'gre equ':
+                                    res = a>=b;
+                                    document.title =`Condition is :${res}`;
+                                    document.getElementById('result').innerHTML=`<h1>Condition is : ${res} </h1>`;
+                                    break;
+
+                              case 'less':
+                                    res = a<b;
+                                    document.title =`Condition is :${res}`;
+                                    document.getElementById('result').innerHTML=`<h1>Condition is : ${res} </h1>`;
+                                    break;
+
+                              case 'less equ':
+                                    res = a<=b;
+                                    document.title =`Condition is :${res}`;
+                                    document.getElementById('result').innerHTML=`<h1>Condition is : ${res} </h1>`;
+                                    break;
+                              default:
+                                    break;
+                        }
+                  }
+            </script>
+      </body>
+</html>

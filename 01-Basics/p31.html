@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+      <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>JS-BASICS</title>
+      </head>
+      <body>
+            <center>
+                  <h1>DataType Conversions</h1>
+            </center>
+            <hr>
+
+            <script>
+                  let str = "123";
+                  document.write(typeof(str) +"<br>"); // Output : string
+
+                  let num = Number(str); //Becomes a number 123
+                  document.write(typeof(num) +"<br>"); // Output : number
+
+                  let number1 = Number("10.5");
+                  document.write(typeof(number1) +"<br>"); // Output : number
+
+                  var x = "123.1231";
+                  var y = "1234.3797263264839";
+                  var z = "Apple";
+
+                  document.write(`<h3> X Data type is = ${typeof(x)} </h3>`);
+                  document.write(`<h3> Y Data type is = ${typeof(y)} </h3>`);
+                  document.write(`<h3> Z Data type is = ${typeof(z)} </h3>`);
+
+                  var a = Number(x);
+                  document.write(`<h3> Number = ${a} </h3>`);
+
+                  var a1 = parseInt(x); //int Values only
+                  document.write(`<h3> Number = ${a1} </h3>`);
+
+                  var a2 = parseFloat(x); //float Values
+                  var a3 = parseFloat(y); //float Values
+
+                  document.write(`<h3> Number = ${a2} </h3>`);
+                  document.write(`<h3> Number = ${a3} </h3>`);
+
+                  let yy = 1234.6754672879839;
+                  document.write(`<h3> Y variable value is = ${yy} </h3>`);
+
+                  document.write(`<h3> Y variable value is = ${yy.toFixed()} </h3>`); // Round Figure
+                  document.write(`<h3> Y variable value is = ${yy.toFixed(1)} </h3>`); // One decimal value after Round Figure
+                  document.write(`<h3> Y variable value is = ${yy.toFixed(2)} </h3>`); // Two decimal values after Round Figure
+                  document.write(`<h3> Y variable value is = ${yy.toFixed(3)} </h3>`); // Three decimal values after Round Figure
+                  document.write(`<h3> Y variable value is = ${yy.toFixed(4)} </h3>`); // Four decimal values after Round Figure
+
+                  Number(true) // returns 1
+                  Number(false) // returns 0
+                  Number(null) // returns 0
+                  Number("123") // returns 123
+                  Number(" ") // returns 0
+                  Number("") // returns 0
+                  Number("123e-1") // returns 12.3
+                  Number("0xFF") // returns 255 (hexadecimal representation)
+                  Number("undefined") // returns NaN-> Not A Number
+                  Number("null") // returns NaN
+                  Number("Hello World!") // returns NaN
+            </script>
+      </body>
+</html>

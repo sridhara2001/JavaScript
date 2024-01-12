@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+      <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Advanced</title>
+      </head>
+      <body>
+            <center>
+                  <h1>addEventListener</h1>
+            </center>
+            <button type="button" id="btn">Click Me</button>
+
+            <script>
+                  // Selecting button element
+                  var btn = document.getElementById('btn');
+
+                  // Defining custom functions
+                  function sayHello() {
+                        alert("Hey I'm Big fan of Virat Kohli");
+                  }
+                  // sayHello();
+
+                  function setHoverColor() {
+                        btn.style.backgroundColor = "yellow";
+                  }
+                  // setHoverColor();
+
+                  function setNormalColor() {
+                        btn.style.backgroundColor = "";
+                  }
+                  // setNormalColor();
+
+                  btn.addEventListener("click", sayHello);
+                  btn.addEventListener("mouseover", setHoverColor);
+                  btn.addEventListener("mouseleave", setNormalColor);
+                  // btn.addEventListener('click mouseleave', sayHello);
+            </script>
+      </body>
+</html>

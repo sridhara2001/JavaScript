@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+      <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Document</title>
+      </head>
+      <body>
+            <center>
+                  <h1>Write protect the value </h1>
+            </center>
+            <hr>
+            <script>
+                  var user = {
+                        email : "dsjbj@112"
+                  };
+                  Object.defineProperties(user,{
+                        name :{
+                        value : "vikki",
+                        writable : true
+                  },
+                  email:{
+                        value : "vzhvjkx@23",
+                        writable : true
+                  }
+            });
+                  console.log('Before =',user);
+                  console.log(user.name);
+
+                  user.name = 'Akki';
+                  user.email = "hjkdvkdshs@123";
+
+                  console.log('After =',user);
+                  console.log(user.name);
+            </script>
+      </body>
+</html>

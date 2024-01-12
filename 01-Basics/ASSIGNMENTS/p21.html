@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+      <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>JS-BASICS</title>
+            <link rel="stylesheet" href="assets/css/style1.css">
+      </head>
+      <body>
+            <div class="big">
+                  <h1>Prime Numbers</h1>
+                  <hr>
+                  
+                  <form onsubmit="condition(event)">
+                        <div>
+                              <label for="">Enter a Number *</label>
+                              <input type="number" name="number1" id="number1" required>
+                        </div>
+                        <button type="submit">SUBMIT</button>
+                  </form>
+                  <div id="result"></div>
+            </div>
+
+            <script>
+                  function condition(event) {
+                        event.preventDefault();
+
+                        let a = document.getElementById('number1').value;
+                        let x = Number(a);
+                        let isPrime = true;
+
+                        if (x==1) {
+                              document.getElementById('result').innerHTML=`<h1>The Number is neither prime nor composite number!</h1>`;
+                        } else if (x>1) {
+                              for (let i = 2; i < x; i++) {
+                                    if (x % i == 0) {
+                                          isPrime = false;
+                                          // break;
+                                    }
+                              }
+                              if (isPrime) {
+                                    document.getElementById('result').innerHTML=`<h1>The Number is a prime Number</h1>`;
+                              } else {
+                                    document.getElementById('result').innerHTML=`<h1>The Number is not a prime Number</h1>`;
+                              }
+                        } else {
+                              document.getElementById('result').innerHTML=`<h1>The Number not is a prime Number</h1>`;
+                        }
+                  }
+            </script>
+      </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+      <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>JS-BASICS</title>
+            <link rel="stylesheet" href="assets/css/style1.css">
+      </head>
+      <body>
+            <div class="big">
+                  <h1>Fibonacci Series</h1>
+                  <hr>
+
+                  <form onsubmit="condition(event)">
+                        <div>
+                              <label for="">Enter the Number *</label>
+                              <input type="number" name="number1" id="number1" required>
+                        </div>
+                        <button type="submit">SUBMIT</button>
+                  </form>
+                  <div id="result"></div>
+            </div>
+
+            <script>
+                  function condition(event) {
+                        event.preventDefault();
+
+                        let a = document.getElementById('number1').value;
+                        let x = Number(a);
+                        let fibSeries = [0,1];
+
+                        for (let i = 2; i < x; i++) {
+                              var nextTerm = fibSeries[i-1] + fibSeries[i-2];
+                              fibSeries.push(nextTerm);
+                        }
+                        document.getElementById('result').innerHTML =`<h1> Fibonacci Series is ${fibSeries}</h1>`;
+                  }
+            </script>
+      </body>
+</html>

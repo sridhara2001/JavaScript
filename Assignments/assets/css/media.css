@@ -1,0 +1,21 @@
+/* MOBILE */
+@media (max-width: 750px) {
+      .empDetails{
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+      }
+      .card{
+            height: auto;
+            width: auto;
+      }
+}
+
+/* TABLET */
+@media (min-width: 751px) and (max-width: 1200px){
+      .empDetails{
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+      }
+}

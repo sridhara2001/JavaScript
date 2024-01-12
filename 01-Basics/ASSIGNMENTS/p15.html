@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+      <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>JS-BASICS</title>
+            <link rel="stylesheet" href="assets/css/style1.css">
+      </head>
+      <body>
+            <div class="big">
+                  <h1>NUMBER OF DAYS IN A MONTH</h1>
+                  <hr>
+
+                  <div onsubmit="condition(event)">
+                        <label for="">Enter a Month *</label>
+                        <input type="number" name="month" id="month" required>
+                  </div>
+                  <button type="submit">SUBMIT</button>
+                  <div id="result"></div>
+            </div>
+
+            <script>
+                  function condition(event) {
+                        event.preventDefault();
+
+                        var m = parseInt(document.getElementById('month').value);
+                        var result = document.getElementById('result');
+                        
+                        if (m>=1 && m<=12) {
+                              var daysInMonth = new Date(2023, month, 0).getDate();
+                              result.textContent = 'There are ${daysInMonth} days in the month ${m}';
+                        } else {
+                              result.textContent = 'Enter valid month';
+                        }
+                  }
+            </script>
+      </body>
+</html>

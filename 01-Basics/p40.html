@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+      <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>JS-BASICS</title>
+      </head>
+      <body>
+            <center>
+                  <h1>Object array</h1>
+            </center>
+            <hr>
+
+            <script>
+                  let users = [
+                        {
+                        id : 1,
+                        name : "Sridhar",
+                        email : "srisridhara2001@gmail.com",
+                        age : 22
+                        },
+                        {
+                        id : 2,
+                        name : "Sridhar1",
+                        email : "srisridhara2001@gmail.com",
+                        age : 22
+                        },
+                        {
+                        id : 3,
+                        name : "Sridhar2",
+                        email : "srisridhara2001@gmail.com",
+                        age : 22
+                        },
+                        {
+                        id : 4,
+                        name : "Sridhar3",
+                        email : "srisridhara2001@gmail.com",
+                        age : 22
+                        }
+                  ];
+
+                  document.write(`<p> USERS ARRAY : ${users}</p>`);
+                  document.write(`<p> USERS ARRAY[1] : ${users[1]}</p>`);
+                  document.write(`<p> USERS ARRAY[2] : ${users[2]}</p>`);
+
+                  document.write(`<p> USERS[i] ID : ${users[0].id}</p>`);
+                  document.write(`<p> USERS[i] NAME : ${users[0].name}</p>`);
+                  document.write(`<p> USERS[i] EMAIL : ${users[0].email}</p>`);
+                  document.write(`<p> USERS[i] AGE : ${users[0].age}</p>`);
+
+                  for (i =0;i < users.length;i++){
+                        document.write(`<p> USERS[i] ID : ${users[i].id}</p>`);
+                        document.write(`<p> USERS[i] NAME : ${users[i].name}</p>`);
+                        document.write(`<p> USERS[i] EMAIL : ${users[i].email}</p>`);
+                        document.write(`<p> USERS[i] AGE : ${users[i].age}</p>`);
+                  }
+
+                  users.forEach(element => {
+                        document.write(element.id,"<br>");
+                        document.write(element.name,"<br>");
+                        document.write(element.email,"<br>");
+                        document.write(element.age,"<br>");
+                  });
+            </script>
+      </body>
+</html>

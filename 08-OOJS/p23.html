@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+      <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>OOJS</title>
+      </head>
+      <body>
+            <center>
+                  <h1>Prototype</h1>
+                  <p>Prototype keyword  - is used to create a property to an constructor externally</p>
+            </center>
+            <hr>
+
+            <script>
+                  function User(){
+                        // ,local property
+                        let name,gender;
+
+                        this.name = "ajs";
+                        this.gender = "male";
+
+                  }
+                  let stud = new User();
+                  document.write("<b>Stud.name : </b>" + stud.name + "<br><br>");
+                  document.write("<b>Stud.gender : </b>" + stud.gender + "<br><br>");
+            </script>
+      </body>
+</html>

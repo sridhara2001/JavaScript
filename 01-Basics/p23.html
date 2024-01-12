@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+      <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>JS-BASICS</title>
+      </head>
+      <body>
+            <center>
+                  <h1>With Parameter, With Return Value Example..!</h1>
+            </center>
+            <hr>
+
+            <script>
+                  function studDetails(firstName, lastName){
+
+                        document.write(`<p>First Parameter value is : ${firstName}</p>`);
+                        document.write(`<p>Second Parameter value is : ${lastName}</p>`);
+
+                        let fn, ln, fullName;
+
+                        fn = firstName;
+                        ln = lastName;
+
+                        document.write(`<p>First Parameter value is : ${fn}</p>`);
+                        document.write(`<p>Second Parameter value is : ${ln}</p>`);                        
+                        
+                        fullName = fn + " " + ln;
+
+                        return fullName;
+                  }
+                  document.write(`The Fullname is : ${studDetails("Sridhar", "Virat")}`);
+            </script>
+      </body>
+</html>

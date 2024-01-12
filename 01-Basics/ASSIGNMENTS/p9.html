@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+      <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>JS-BASICS</title>
+            <link rel="stylesheet" href="assets/css/style.css">
+      </head>
+      <body>
+            <div class="big">
+                  <h1>Converting Temperature into Celsius</h1>
+                  <hr>
+                  <h2>The Formula for Converting Fahrenhiet to Celsius is : " Celsius = (Fahrenhiet - 32) * 5/9 "</h2>
+                  <form onsubmit="condition(event)">
+                        <div>
+                              <label for="">Enter the Temperature in F *</label>
+                              <input type="number" name="number1" id="number1" required>
+                        </div>
+                        <button type="submit">Convert</button>
+                  </form>
+                  <div id="result"></div>
+            </div>
+
+            <script>
+                  function condition(event) {
+                        event.preventDefault();
+
+                        let temp = document.getElementById('number1').value;
+                        let tempInF = Number(temp);
+                        
+                        var tempInC = (tempInF - 32) * 5/9;
+                        document.getElementById('result').innerHTML =`<h1> The Value of Temperature after converting from Fahrenheit to Celsius is ${tempInC.toFixed(4)} </h1>`;
+                  }
+            </script>
+      </body>
+</html>

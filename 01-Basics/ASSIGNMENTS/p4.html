@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+      <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>JS-BASICS</title>
+            <link rel="stylesheet" href="assets/css/style.css">
+      </head>
+      <body>
+            <div class="big">
+                  <h1>JAVASCRIPT ASSIGNMENT OPERATORS</h1>
+                  <hr>
+
+                  <form onsubmit="condition(event)">
+                        <div>
+                              <label for="operation">Choose an Operation *</label>
+                              <select name="operation" id="operation" required>
+                                    <option value="">--SELECT OPERATION--</option>
+                                    <option value="assign">ASSIGN</option>
+                                    <option value="add">ADD AND ASSIGN</option>
+                                    <option value="sub">SUBTRACT AND ASSIGN</option>
+                                    <option value="mul">MULTIPLY AND ASSIGN</option>
+                                    <option value="div">DIVIDE AND ASSIGN</option>
+                                    <option value="mod">MODULUS AND ASSIGN</option>
+                              </select>
+                        </div>
+                        <div>
+                              <label for="number1">Enter Number *</label>
+                              <input type="number" name="number1" id="number1" required>
+                        </div>
+                        <div>
+                              <label for="number2">Enter Number *</label>
+                              <input type="number" name="number2" id="number2" required>
+                        </div>
+                        <button type="submit">Execute Code</button>
+                  </form>
+                  <div id="result"></div>
+            </div>
+
+            <script>
+                  function condition(event){
+                        event.preventDefault();
+
+                        let key=document.getElementById('operation').value;
+                        let a= document.getElementById('number1').value;
+                        let b= document.getElementById('number2').value;
+            
+                        let x=Number(a);
+                        let y=Number(b);
+                  
+                        switch(key){
+                              case 'assign':
+                                    x = x+y;
+                                    document.title= `The Value is  = ${x}`;
+                                    document.getElementById('result').innerHTML=`<h1>The Value after operation is = ${x} </h1>`;
+                                    break;
+
+                              case 'add':
+                                    x += y;
+                                    document.title=`The Value is = ${x}`;
+                                    document.getElementById('result').innerHTML=`<h1>The Value after operation is = ${x} </h1>`;
+                                    break;
+
+                              case 'sub':
+                                    x -= y;
+                                    document.title=`The Value is = ${x}`;
+                                    document.getElementById('result').innerHTML=`<h1>The Value after operation is = ${x} </h1>`;
+                                    break;
+
+                              case 'mul':
+                                    y *= x;
+                                    document.title=`The Value is = ${y}`;
+                                    document.getElementById('result').innerHTML=`<h1>The Value after operation is = ${y} </h1>`;
+                                    break;
+
+                              case 'div':
+                                    y /= x;
+                                    document.title=`The Value is = ${y}`;
+                                    document.getElementById('result').innerHTML=`<h1>The Value after operation is = ${y} </h1>`;
+                                    break; 
+
+                              case 'mod':
+                                    y %= x;
+                                    document.title=`The Value is = ${y}`;
+                                    document.getElementById('result').innerHTML=`<h1>The Value after operation is = ${y} </h1>`;
+                                    break; 
+                        }
+                  }
+            </script>
+      </body>
+</html>

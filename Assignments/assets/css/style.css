@@ -1,0 +1,78 @@
+*{
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+}
+body{
+      background-color: #000;
+}
+.card{
+      height: 410px;
+      width: 280px;
+      border: 2px solid #e81111;
+      border-radius: 20px;
+      padding: 20px;
+      line-height: 1.5;
+      background-color: #fff;
+}
+.card>.employee>button{
+      padding: 10px;
+      width: 90px;
+      margin-left: 5px;
+      margin-top: 15px;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: 500;
+      transition: 1s ease-in-out;
+}
+.card>.employee>#btn1{
+      background-color: rgb(16, 203, 44);
+      color: #fff;
+}
+.card>.employee>#btn1:hover{
+      background-color: rgb(230, 13, 13);
+      color: black;
+      font-weight: bold;
+}
+.card>.employee>#btn2{
+      background-color: rgb(230, 13, 13);
+      color: #fff;
+}
+.card>.employee>#btn2:hover{
+      background-color: rgb(16, 203, 44);
+      color: black;
+      font-weight: bold;
+}
+.empDetails{
+      padding: 20px;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
+      gap: 30px;
+      text-align: center;
+}
+.employee>img{
+      height: 100px;
+      width: 100px;
+      border-radius: 50%;
+      border: 2px solid #000;
+}
+.employee>section>h1{
+      font-size: 35px;
+      font-weight: bold;
+}
+.employee>section>h3:nth-child(2){
+      font-size: 26px;
+      font-weight: 500;
+      color: rgb(40, 9, 215);
+}
+.employee>section>h2:nth-child(3){
+      font-size: 22px;
+      font-weight: 500;
+      color: red;
+}
+.employee>section>h3:nth-child(4), .employee>section>h3:nth-child(5){
+      font-size: 21px;
+      font-weight: 500;
+}

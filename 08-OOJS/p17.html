@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+      <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Document</title>
+      </head>
+      <body>
+            <center>
+                  <h1>Object.freez()</h1>
+            </center>
+            <hr>
+            <script>
+                  var user = {
+                        email : "dsjbj@112",
+                        age : 23,
+                        mobile : 345345345
+                  };
+                  Object.defineProperty(user,'name',{
+                        value : "vikki",
+                        writable : true
+                  });
+                  console.log('Before =',user);
+
+                  Object.freeze(user);
+
+                  user.name = 'bdjbdj';
+                  user.mobile = 355535233
+
+                  console.log('After =',user);
+
+            </script>
+      </body>
+</html>

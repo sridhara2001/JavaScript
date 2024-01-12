@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+      <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>BOM</title>
+      </head>
+      <body>
+            <script>
+                  function myFunction() {
+                        alert("Hello World!");
+                  }
+                  //myFunction();
+                  //setInterval(myFunction,1000);
+                  // setTimeout(myFunction,1000);
+            </script>
+            <button type="button" onclick="setTimeout(myFunction,1000)">Click Me</button>
+
+            <p>The current time on your computer is: <span id="clock"></span></p>
+
+            <script>
+                  function showTime() {
+                        let d = new Date();
+                        document.getElementById("clock").innerHTML = d.toLocaleTimeString();
+                  }
+      
+                  var intervalID = setInterval(showTime,1000);
+
+                  function stopClock() {
+                        clearInterval(intervalID);
+                  }
+            </script>
+            <button type="button" onclick="stopClock()">STOP CLOCK</button>
+      </body>
+</html>

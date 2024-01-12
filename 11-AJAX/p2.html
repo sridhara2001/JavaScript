@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+      <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>AJAX</title>
+      </head>
+      <body>
+            <center>
+                  <h1>PROMISES</h1>
+            </center>
+            <hr>
+
+            <h3>What is Promises</h3>
+            <p>Promise is built in constructor of javascript.</p>
+            <p>A Promise object represents an operation which has produced or will eventually produce a value. Promises provide a robust way to wrap the (possibly pending) result of asynchronous request.</p>
+
+            <h3>States of Promises</h3>
+            <h4>1) Pending</h4>
+            <p>The underlying operation has not yet completed or neither rejected.</p>
+
+            <h4>2) Fulfilled</h4>
+            <p>The operation has finished and promise is fulfilled with a response. (.then()) is used handle fulfilled response.</p>
+
+            <h4>3) Rejected</h4>
+            <p>The error has occurred during the operation is rejected with a reason. (.catch()) is used to catch the error.</p>
+
+            <h4>4) Settled</h4>
+            <p>A promise a said to settled (either resolved or rejected). Once the promise is settled, it becomes immutable.</p>
+
+            <script>
+                  let x = 90;
+
+                  const myResponse = new Promise(function(resolve, reject){
+                        if (x<100) {
+                              resolve("Hi Welcome to new promise response");
+                        } else {
+                              reject("Oops sorry my value is meet the condition.");
+                        }
+                  });
+
+                  console.log(myResponse);
+                  console.log(typeof myResponse);
+
+                  myResponse.then(function(value){
+                        // fulfilled response
+                        alert(value);
+                  }).catch(function(error){
+                        // rejected response
+                        alert(error);
+                  });
+            </script>
+      </body>
+</html>

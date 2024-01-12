@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+      <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>JS-BASICS</title>
+            <link rel="stylesheet" href="assets/css/style.css">
+      </head>
+      <body>
+            <div class="big"> 
+                  <h1>CHECK THE VALIDATION OF TRIANGLE</h1>
+                  <hr>
+
+                  <form onsubmit="condition(event)">
+                        <div>
+                        <label for="">Enter the Angle of Side1 *</label>
+                        <input type="number" name="angle1" id="number1" required>
+                        </div>
+
+                        <div>
+                        <label for="">Enter the Angle of Side2 *</label>
+                        <input type="number" name="angle2" id="number2" required>
+                        </div>
+
+                        <div>
+                        <label for="">Enter the Angle of Side3 *</label>
+                        <input type="number" name="angle3" id="number3" required>
+                        </div>
+
+                        <button type="submit">SUBMIT</button>
+                  </form>
+                  <div id="result"></div>
+            </div>
+            <script>
+                  function condition(event) {
+                        event.preventDefault();
+                        let a = document.getElementById('number1').value;
+                        let b = document.getElementById('number2').value;
+                        let c = document.getElementById('number3').value;
+                              
+                        let x = Number(a);
+                        let y = Number(b);
+                        let z = Number(c);
+
+                        if (x+y+z==180 && x !== 0 && y !== 0 && z !== 0) {
+                              document.getElementById('result').innerHTML =`<h1>The Triangle is VALID</h1>`;
+                        } else {
+                              document.getElementById('result').innerHTML =`<h1>The Triangle is NOT VALID</h1>`;
+                        }
+                  }
+                  
+            </script>
+      </body>
+</html>

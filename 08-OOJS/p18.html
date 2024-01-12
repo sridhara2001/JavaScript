@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+      <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Document</title>
+      </head>
+      <body>
+            <center>
+                  <h1>Entries the object conversion </h1>
+            </center>
+            <hr>
+            <script>
+                  const userEntry = [['name','sridhar'],['age',22],['mobile',8383883838]];
+                  console.log('userEntry :',userEntry);
+
+                  // convert entries into object
+                  const userObject = Object.fromEntries(userEntry);
+                  console.log(userObject)
+            </script>
+      </body>
+</html>

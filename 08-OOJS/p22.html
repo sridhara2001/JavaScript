@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOJS</title>
+</head>
+<body>
+    <center>
+        <h1>parameter function constructor properties</h1>
+    </center>
+    <hr>
+    <script>
+        function User(s,d,r){
+            this.name =s;
+            this.email = d;
+            this.age = r;
+
+        }
+
+        // instance -> it is a variable we provide permission to access the prpperties of constructor
+
+        let x = new User('vikki','bkjkj@12',23);
+        console.log('constructor instance =', x);
+
+        document.write(<h3> name = ${x.name}</h3>);
+        document.write(<h3> email = ${x.email}</h3>);
+        document.write(<h3> age = ${x.age}</h3>);
+
+        let x1 = new User('sonu','bkjkj@123',24);
+        console.log('constructor instance =', x);
+
+        document.write(<h3> name = ${x.name}</h3>);
+        document.write(<h3> email = ${x.email}</h3>);
+        document.write(<h3> age = ${x.age}</h3>);
+    </script>
+</body>
+</html>

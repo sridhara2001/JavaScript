@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+      <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>JS-BASICS</title>
+            <link rel="stylesheet" href="assets/css/style1.css">
+      </head>
+      <body>
+           <div class="big">
+                  <h1>Finding Odd or Even Number</h1>
+                  <hr>
+
+                  <form onsubmit="condition(event)">
+                        <div>
+                              <label for="">Enter the Number *</label>
+                              <input type="number" name="number1" id="number1" required>
+                        </div>
+                        <button type="submit">Check the Number</button>
+                  </form>
+                  <div id="result"></div>
+           </div> 
+
+           <script>
+                  function condition(event){
+                        event.preventDefault();
+
+                        let num = document.getElementById('number1').value;
+                        let a = Number(num);
+
+                        if (a % 2 == 0) {
+                              document.getElementById('result').innerHTML =`<h1> The Number ${a} is EVEN </h1>`;
+                        } else {
+                              document.getElementById('result').innerHTML =`<h1> The Number ${a} is ODD </h1>`;
+                        }
+                  }
+           </script>
+      </body>
+</html>

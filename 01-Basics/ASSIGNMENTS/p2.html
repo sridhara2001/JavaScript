@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+      <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>JS-BASICS</title>
+            <link rel="stylesheet" href="assets/css/style.css">
+      </head>
+      <body>
+            <div class="big">
+                  <h1>JAVASCRIPT LOGICAL OPERATOR</h1>
+                  <hr>
+
+                  <form onsubmit="condition(event)">
+                        <div>
+                              <label for="operation">Choose an Operation *</label>
+                              <select name="operation" id="operation" required>
+                                    <option value="">----------SELECT OPERATION----------</option>
+                                    <option value="AND">Logical AND</option>
+                                    <option value="OR">Logical OR</option>
+                                    <option value="NOT">Logical NOT</option>
+                              </select>
+                        </div>
+                        <div>
+                              <label for="number1">Enter Number 1 *</label>
+                              <input type="number" name="number1" id="number1" required>
+                        </div>
+                        <div>
+                              <label for="number2">Enter Number 2 *</label>
+                              <input type="number" name="number2" id="number2" required>
+                        </div>
+                        <div>
+                              <label for="number3">Enter Number 3 *</label>
+                              <input type="number" name="number3" id="number3" required>
+                        </div>
+                        <div>
+                              <label for="number4">Enter Number 4 *</label>
+                              <input type="number" name="number4" id="number4" required>
+                        </div>
+                        <button type="submit">Execute Code</button>
+                  </form>
+                  <div id="result"></div>
+            </div>
+
+            <script>
+                  function condition(event) {
+                        event.preventDefault();
+
+                        let key = document.getElementById('operation').value;
+                        let a = document.getElementById('number1').value;
+                        let b = document.getElementById('number2').value;
+
+                        let m = document.getElementById('number3').value;
+                        let n = document.getElementById('number4').value;
+                        let res = 0;
+
+                        switch (key) {
+                              case 'AND':
+                                    res = a==b && m==n;
+                                    document.title= `The Condition is : ${res}`;
+                                    document.getElementById('result').innerHTML=`<h1>Logical AND Operation Condition is = ${res} </h1>`;
+                                    break;
+
+                              case 'OR':
+                                    res = a==b || m==n;
+                                    document.title= `The Condition is : ${res}`;
+                                    document.getElementById('result').innerHTML=`<h1>Logical OR Operation Condition is = ${res}</h1>`;
+                                    break;
+
+                              case 'NOT':
+                                    res = ~(a==b & m==n);
+                                    document.title= `The Condition is : ${res}`;
+                                    document.getElementById('result').innerHTML=`<h1>Logical NOT Operation Condition is = ${res}</h1>`;
+                                    break;
+                              default:
+                                    break;
+                        }
+                  }
+            </script>
+      </body>
+</html>

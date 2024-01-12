@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+      <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>JS-BASICS</title>
+            <link rel="stylesheet" href="assets/css/style.css">
+      </head>
+      <body>
+            <div class="big">
+                  <h1>JAVASCRIPT BITWISE OPERATOR</h1>
+                  <hr>
+
+                  <form onsubmit="condition(event)">
+                        <div>
+                              <label for="operation">Choose an Operation *</label>
+                              <select name="operation" id="operation" required>
+                                    <option value="">----------SELECT OPERATION----------</option>
+                                    <option value="AND">Bitwise AND</option>
+                                    <option value="OR">Bitwise OR</option>
+                                    <option value="XOR">Bitwise XOR</option>
+                                    <option value="NOT">Bitwise NOT</option>
+                                    <option value="LEFT">Bitwise LEFT SHIFT</option>
+                                    <option value="RIGHT">Bitwise RIGHT SHIFT</option>
+                                    <option value="RIGHT0">Bitwise RIGHT SHIFT WITH ZERO</option>
+                        </select>
+                        </div>
+                        <div>
+                              <label for="number1">Enter Number *</label>
+                              <input type="number" name="number1" id="number1" required>
+                        </div>
+                        <div>
+                              <label for="number2">Enter Number *</label>
+                              <input type="number" name="number2" id="number2" required>
+                        </div>
+                        <div>
+                              <label for="number3">Enter Number *</label>
+                              <input type="number" name="number3" id="number3" required>
+                        </div>
+                        <div>
+                              <label for="number4">Enter Number *</label>
+                              <input type="number" name="number4" id="number4" required>
+                        </div>
+                        <button type="submit">Execute Code</button>
+                  </form>
+                  <div id="result"></div>
+            </div>
+
+            <script>
+                  function condition(event) {
+                        event.preventDefault();
+
+                        let key = document.getElementById('operation').value;
+                        let a = document.getElementById('number1').value;
+                        let b = document.getElementById('number2').value;
+
+                        let m = document.getElementById('number3').value;
+                        let n = document.getElementById('number4').value;
+                        let res=0;
+
+                        switch (key) {
+                              case 'AND':
+                                    res = a==b & m==n;
+                                    document.title= `The Condition is : ${res}`;
+                                    document.getElementById('result').innerHTML=`<h1>Bitwise AND Operation Condition is = ${res} </h1>`;
+                                    break;
+
+                              case 'OR':
+                                    res = a==b | m==n;
+                                    document.title= `The Condition is : ${res}`;
+                                    document.getElementById('result').innerHTML=`<h1>Bitwise OR Operation Condition is = ${res}</h1>`;
+                                    break;
+                              
+                              case 'XOR':
+                                    res = a==b ^ m==n ^ m==n;
+                                    document.title= `The Condition is : ${res}`;
+                                    document.getElementById('result').innerHTML=`<h1>Bitwise XOR Operation Condition is = ${res}</h1>`;
+                                    break;
+
+                              case 'NOT':
+                                    res = ~~(a==b & m==n);
+                                    document.title= `The Condition is : ${res}`;
+                                    document.getElementById('result').innerHTML=`<h1>Bitwise NOT Operation Condition is = ${res}</h1>`;
+                                    break;
+
+                              case 'LEFT':
+                                    res = a<<b;
+                                    document.title= `The Value is : ${res}`;
+                                    document.getElementById('result').innerHTML=`<h1>Bitwise LEFT SHIFT Operation Value is = ${res}</h1>`;
+                                    break;
+                                    
+                              case 'RIGHT':
+                                    res = a>>b;
+                                    document.title= `The Value is : ${res}`;
+                                    document.getElementById('result').innerHTML=`<h1>Bitwise RIGHT SHIFT Operation Value is = ${res}</h1>`;
+                                    break;
+
+                              case 'RIGHT0':
+                                    res = a<<b;
+                                    document.title= `The Value is : ${res}`;
+                                    document.getElementById('result').innerHTML=`<h1>Bitwise RIGHT SHIFT ZERO Operation Value is = ${res}</h1>`;
+                                    break;
+                              default:
+                                    break;
+                        }
+                  }
+            </script>
+      </body>
+</html>

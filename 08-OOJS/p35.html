@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+      <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>OOJS</title>
+      </head>
+      <body>
+            <center>
+                  <h1>Javascript Constructor Method</h1>
+                  <p>This is special type of method which is used to initialize and create an object.</p>
+            </center>
+            <hr>
+
+            <h3>Points to Remember</h3>
+            <ul>
+                  <li>Constructor Key word is used to declare a Constructor method.</li>
+                  <li>The Class can contain one constructor method only.</li>
+                  <li>Parent class constructor through super keyword.</li>
+            </ul>
+            <hr>
+
+            <h3>Constructor Method Example-1..!</h3>
+
+            <script>
+                  class Employee{
+                        constructor() {
+                              this.id = 1;
+                              this.name = "Sridhar";
+                        }
+                  }
+                  var emp = new Employee();
+                  document.write(emp.id + " " + emp.name);
+            </script>
+
+            <h3>Constructor Method Example-2 with Super Keyword..!</h3>
+            <script>
+                  // Parent Class
+                  class CompanyName {
+                        constructor() {
+                              this.company = "Google Inc";
+                        }
+                  }
+
+                  class EmployeeCompany extends CompanyName {
+                        constructor(id, name) {
+                              super();
+                              this.id1 = id;
+                              this.name1 = name;
+                              this.company1 = this.company;
+                        }
+                  }
+                  let employeeCompany = new EmployeeCompany(33, 'Sridhar');
+
+                  document.write(`
+                  <p>Employee ID : ${employeeCompany.id1} </p>
+                  <p>Employee Name : ${employeeCompany.name1} </p>
+                  <p>Employee Company : ${employeeCompany.company1} </p>`);
+            </script>
+      </body>
+</html>

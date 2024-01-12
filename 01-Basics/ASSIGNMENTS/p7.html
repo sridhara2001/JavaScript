@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+      <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Assignment</title>
+            <link rel="stylesheet" href="assets/css/style.css">
+      </head>
+      <body>
+            <div class="big">
+                  <h1>Largest of Three Numbers</h1>
+                  <hr>
+
+                  <form onsubmit="condition(event)">
+                        <div>
+                              <label for="number1">Enter Number 1 *</label>
+                              <input type="number" name="number1" id="number1" required>
+                        </div>
+                        <div>
+                              <label for="number2">Enter Number 2 *</label>
+                              <input type="number" name="number2" id="number2" required>
+                        </div>
+                        <div>
+                              <label for="number3">Enter Number 3 *</label>
+                              <input type="number" name="number3" id="number3" required>
+                        </div>
+                        <button type="submit">Check the Numbers</button>
+                  </form>
+                  <div id="result"></div>
+            </div>
+
+            <script>
+                  function condition(event){
+                        event.preventDefault();
+                  
+                        let a = document.getElementById('number1').value;
+                        let b = document.getElementById('number2').value;
+                        let c = document.getElementById('number3').value;
+
+                        let x = Number(a);
+                        let y = Number(b);
+                        let z = Number(c);
+
+                        if (a>b && a>c) {
+                              document.getElementById('result').innerHTML =`<h1>The Largest of Three Numbers is ${x}</h1>`;
+                        } else if (b>a && b>c) {
+                              document.getElementById('result').innerHTML =`<h1>The Largest of Three Numbers is ${y}</h1>`;
+                        } else if (c>a && c>b) {
+                              document.getElementById('result').innerHTML =`<h1>The Largest of Three Numbers is ${z}</h1>`;
+                        } else {
+                              document.getElementById('result').innerHTML =`<h1>The Numbers are EQUAL</h1>`;
+                        }
+                  }
+            </script>
+      </body>
+</html>

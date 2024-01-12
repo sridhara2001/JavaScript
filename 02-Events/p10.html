@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+      <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>JS-EVENTS</title>
+            <style>
+                  body {
+                        width: 100% auto;
+                        height: 100vh;
+                        background-color: #ccc;
+                  }
+                  .blk {
+                        width: 50%;
+                        background-color: crimson;
+                        color: #fff;
+                        padding: 12px;
+                  }
+            </style>
+      </head>
+      <!-- event => event ref as a parameter to the Handler function-->
+      <body oncontextmenu="contextHandler(event)">
+            <h3>oncontextmenu()</h3>
+            <div class="blk" id="blk">
+                  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque, impedit ut! Blanditiis nobis nihil eius vitae, perspiciatis similique cupiditate libero ipsam provident, quaerat esse impedit, placeat sed. Nihil, temporibus voluptatibus? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste quo dolorem aut dolorum. Quis, consequuntur accusamus itaque aspernatur delectus obcaecati. Pariatur et debitis doloremque possimus quos veniam qui impedit ipsum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam ratione fuga, praesentium velit accusantium repellat exercitationem nam quos minus ullam officia modi! Sunt exercitationem saepe explicabo veniam inventore aut quasi! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae nesciunt ut, nobis molestias natus accusantium non aliquid ratione aliquam earum alias nisi veniam inventore sequi eius magnam, maxime voluptate. Itaque.</p>
+            </div>
+
+            <script>
+                  function contextHandler(event) {
+                        event.preventDefault();
+                        alert("Right click has disabled");
+                  }
+            </script>
+      </body>
+</html>

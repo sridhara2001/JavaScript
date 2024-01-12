@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+      <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>JS-BASICS</title>
+            <link rel="stylesheet" href="assets/css/style.css">
+      </head>
+      <body>
+            <center>
+                  <h1>Exponent of a Number using Recursion</h1>
+            </center>
+            <hr>
+
+            <script>
+                  function findExponent (b, e) {
+                        if (e==0) {
+                              return 1;
+                        } else {
+                              return base * findExponent(b, e-1);
+                        }
+                  }
+
+                  const b = 10;
+                  document.write(`<h2> The base number is : ${b} </h2>`);
+
+                  const e = 2;
+                  document.write(`<h2> The exponent number is : ${e} </h2>`);
+
+                  const result = findExponent(b, e);
+                  document.write(`<h2>The value of ${b}^${e} is : ${result} </h2>`);
+            </script>
+      </body>
+</html>

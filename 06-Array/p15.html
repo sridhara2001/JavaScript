@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Array</title>
+    </head>
+    <body>
+        <center>
+            <h2>14) indexof();</h2>
+            <p>This method returns the first index(position) of a specified value of an array elements. 
+                it returns -1 if the value is not found and it searche from left to right.
+            </p>
+            <p>Negative starts value counts from the last element(but still searches from left to right)</p>
+        </center>
+        <hr>
+
+        <p><b>SYNTAX:</b></p>
+
+        <pre>
+            array.indexof(array);
+        </pre>
+        <hr>
+
+        <script>
+            let ary = ['a','v','d','e','g'];
+
+
+
+            document.write(<p>Default Before array result : ${ary.indexOf('a')}</p>);
+
+            document.write(<p>Default Before array result : ${ary.indexOf('d')}</p>);
+            document.write(<p>Default Before array result : ${ary.indexOf('e')}</p>);
+            document.write(<p>Default Before array result : ${ary.indexOf('z')}</p>);
+            
+            document.write(<p>Default Before array result : ${ary.indexOf('d',2)}</p>);
+            
+        </script>
+    </body>
+</html>

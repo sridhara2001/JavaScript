@@ -1,0 +1,42 @@
+*{
+      padding: 0%;
+      margin: 0%;
+      box-sizing: border-box;
+}
+body{
+      background: linear-gradient(to right, rgba(26, 129, 203,0.7), rgba(2, 101, 65,0.8));
+      text-align: center;
+}
+h1, form{
+      padding: 20px;
+}
+form{
+      border: 2px solid black;
+      width: 460px;
+      height: 200px;
+      margin-top: 20px;
+      margin-left: 415px;
+      box-shadow: 0px 2px 3px black;
+      line-height: 2;
+}
+.form-group, .form-group>input{
+      font-size: 20px;
+      font-weight: bold;
+}
+.btn{
+      padding: 4px 8px;
+      border-radius: 20px;
+      border: none;
+      margin-top: 20px;
+      transition: 1s;
+}
+.btn:hover{
+      cursor: pointer;
+      background-color: rgb(27, 22, 178);
+      color: white;
+}
+#result{
+      padding: 20px;
+      font-size: 25px;
+      text-shadow: 0px 2px 3px black;
+}

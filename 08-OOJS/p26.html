@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+      <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>OOJS</title>
+      </head>
+      <body>
+            <center>
+                  <h1>Object inheritance using __proto__</h1>
+            </center>
+            <hr>
+
+            <script>
+                  let user = {
+                        name: 'Mohan',
+                        email: 'mohan@gmail.com'
+                  };
+
+                  console.log('USER =', user);
+
+                  let user1 = {
+                        mobile: '8970287476',
+                        age: 22,
+                        __proto__: user
+                  }
+                  console.log('USER1 =', user1);
+
+                  let user2 = {
+                        course: "javascript",
+                        duration: "1.4 month",
+                        __proto__: user1
+                  }
+                  console.log('USER2 =', user2);
+
+                  document.write(`<h3> ${user.name} </h3>`);
+                  document.write(`<h3> ${user.email} </h3>`);
+                  document.write(`<h3> ${user.mobile} </h3>`);
+                  document.write(`<h3> ${user.age} </h3>`);
+            </script>
+      </body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+      <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>JS-BASICS</title>
+      </head>
+      <body>
+            <center>
+                  <h1>Array using Constructor</h1>
+            </center>
+            <hr>
+
+            <script>
+                  // ref / instance => x
+
+                  let x = new Array();
+                  document.write(`<p> X is : ${typeof(x)} </p>`);
+
+                  // assign the values
+                  x[0] = "Sridhar";
+                  x[1] = "Harsha";
+                  x[2] = "Amogha";
+                  x[3] = "Likhith";
+
+                  document.write(`<h3> ${x} </h3>`);
+                  document.write(`<h3> ${x[2]} </h3>`);
+
+                  // while (condition) {
+                        
+                  // }
+
+                  // do {
+                        
+                  // } while (condition);
+
+                  // for (let index = 0; index < array.length; index++) {
+                  //       const element = array[index];
+                        
+                  // }
+
+                  x.forEach(item => {
+                        document.write(`<h3 style='color:blue;'> ${item} </h3>`);
+                  });
+                  
+                  x.forEach(function(item){
+                        document.write(`<h3>Foreach : ${item} </h3>`);
+                  });
+            </script>
+      </body>
+</html>

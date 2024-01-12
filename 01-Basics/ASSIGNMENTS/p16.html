@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+      <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>JS-BASICS</title>
+            <link rel="stylesheet" href="assets/css/style1.css">
+      </head>
+      <body>
+            <div class="big">
+                  <h1>VOWEL OR CONSONANT</h1>
+                  <hr>
+
+                  <form onsubmit="condition(event)">
+                        <div>
+                              <label for="">Enter a Alphabet *</label>
+                              <input type="text" name="alphabet" id="alphabet" required>
+                        </div>
+                        <button type="submit">Check</button>
+                  </form>
+                  <div id="result"></div>
+            </div>
+
+            <script>
+                  function condition(event) {
+                        event.preventDefault();
+
+                        let x = document.getElementById('alphabet').value;
+
+                        if (/[0-9]/.test(x)) {
+                              document.getElementById('result').innerHTML =`<h1> Enter a Alphabet, it is Number</h1>`;
+                        } else if (/[a-zA-Z]/.test(x)) {
+                              if (x=='a' || x=='e' || x=='i' || x=='o' || x=='u' || x=='A' || x=='E' || x=='I' || x=='O' || x=='U') {
+                                    document.getElementById('result').innerHTML =`<h1> The Alphabet entered is Vowel </h1>`;
+                              } else {
+                                    document.getElementById('result').innerHTML =`<h1> The Alphabet entered is Consonant </h1>`;
+                              }
+                        } else {
+                              document.getElementById('result').innerHTML =`<h1> Enter a Alphabet, it is special character </h1>`;
+                        }
+                  }
+            </script>
+      </body>
+</html>
